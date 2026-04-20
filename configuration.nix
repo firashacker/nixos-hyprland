@@ -161,7 +161,13 @@
     enable32Bit = true;
   };
 
-  programs.zsh.enable = true;
+  # /etc/nixos/configuration.nix
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+  };
   programs.bash.enable = true;
   users.users.firas = {
     isNormalUser = true;
@@ -173,6 +179,7 @@
       vesktop
       zed-editor
       bun
+      sqlitebrowser
       github-cli
       #wineWow64Packages.staging
       #winetricks
@@ -214,7 +221,8 @@
     gamemode
     goverlay 
     playerctl 
-    git 
+    git
+    tmux
     hyprpaper 
     hyprlock 
     hypridle 
