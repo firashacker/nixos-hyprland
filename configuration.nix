@@ -175,6 +175,7 @@
     extraGroups = [ "wheel"  "networkmanager" "video" "input" "libvirtd"]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
+      fzf
       discord
       vesktop
       zed-editor
