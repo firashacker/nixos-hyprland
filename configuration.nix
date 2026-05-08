@@ -169,6 +169,11 @@
     syntaxHighlighting.enable = true;
   };
   programs.bash.enable = true;
+  # distrobox requrements
+  virtualisation.podman = {
+  enable = true;
+  dockerCompat = true;
+  };
   users.users.firas = {
     isNormalUser = true;
     shell = pkgs.zsh;  # 👈 change to your shell
@@ -182,6 +187,7 @@
       bun
       sqlitebrowser
       github-cli
+      distrobox # distrobox enable
       #wineWow64Packages.staging
       #winetricks
       #font-manager
