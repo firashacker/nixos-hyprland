@@ -105,7 +105,14 @@
       hide_version_string = true;
     };
   };
+
+ ###### some shit 
+  nixpkgs.config.permittedInsecurePackages = [
+    "pnpm-10.29.2"
+  ];
   
+ #######
+
   #console.colors = [
   #  "1e1e2e" "bf616a" "a3be8c" "ebcb8b"
   #  "81a1c1" "b48ead" "88c0d0" "d8dee9"
@@ -212,7 +219,8 @@
   powerManagement.cpuFreqGovernor = "performance";
   #services.mpd.enable = true;
 
-  environment.systemPackages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [
+    #quickshell
     stow
     arc-theme
     qogir-icon-theme
